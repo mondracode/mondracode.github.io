@@ -1,0 +1,94 @@
+@use "node_modules/@picocss/pico/scss/pico";
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/inter/InterVariable.woff2");
+}
+
+@font-face {
+  font-family: "InterItalic";
+  font-style: italic, oblique;
+  src: url("../../public/fonts/inter/InterVariable-Italic.woff2");
+}
+
+@font-face {
+  font-family: "Redaction";
+  src: url("../../public/fonts/redaction/Redaction_35-Regular.woff2");
+}
+
+@mixin dotted-border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='3' stroke-dasharray='1%2c 6' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+}
+
+@mixin redaction {
+  --pico-font-family: "Redaction", serif;
+  --pico-font-weight: 400;
+  --pico-typography-spacing-vertical: 0.5rem;
+}
+
+@mixin inter-semibold {
+  --pico-font-family: "Inter", sans-serif;
+  --pico-font-weight: 600;
+  --pico-font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+
+:root {
+  --pico-font-family-sans-serif: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 50em;
+  margin-top: 6rem;
+}
+
+section {
+  padding: 2rem 3rem;
+  @include dotted-border;
+}
+
+nav {
+  @include dotted-border;
+  top: 0;
+  align-items: baseline;
+  margin: 1rem;
+  padding: 0 2rem 0 2rem;
+  position: fixed;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  background-color: var(--pico-background-color);
+
+  * {
+    @include inter-semibold;
+  }
+}
+
+h1 {
+  --pico-font-size: 4rem;
+  @include redaction;
+}
+
+h2 {
+  @include redaction;
+  --pico-font-size: 3rem;
+}
+
+h3 {
+  --pico-font-family: "Inter", sans-serif;
+  --pico-font-weight: 400;
+  --pico-typography-spacing-vertical: 0.5rem;
+  --pico-line-height: 1.5;
+  --pico-font-size: 1rem;
+  letter-spacing: -0.04em;
+}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --pico-background-color: #f8f8f8;
+  --pico-h1-color: #1791dc;
+  --pico-h2-color: #1791dc;
+}
+
+[data-theme="dark"] {
+  --pico-background-color: #13171f;
+}
