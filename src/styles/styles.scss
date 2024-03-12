@@ -37,11 +37,6 @@
   --pico-font-family-sans-serif: "Inter", sans-serif;
 }
 
-.container {
-  max-width: 50em;
-  margin-top: 6rem;
-}
-
 section {
   padding: 2rem 3rem;
   @include dotted-border;
@@ -74,12 +69,44 @@ h2 {
 }
 
 h3 {
+  @include inter-semibold;
+  --pico-font-size: 1.4rem;
+  --pico-typography-spacing-vertical: 0;
+}
+
+h4 {
   --pico-font-family: "Inter", sans-serif;
   --pico-font-weight: 400;
-  --pico-typography-spacing-vertical: 0.5rem;
+  --pico-typography-spacing-vertical: 0;
   --pico-line-height: 1.5;
   --pico-font-size: 1rem;
   letter-spacing: -0.04em;
+}
+
+h5 {
+  --pico-typography-spacing-vertical: 0;
+  --pico-font-family: "InterItalic", sans-serif;
+  --pico-font-weight: 300;
+  --pico-font-size: 0.75rem;
+  letter-spacing: -0.04em;
+}
+
+.container {
+  max-width: 50em;
+  margin-top: 6rem;
+}
+
+.position-name {
+  @include inter-semibold;
+  color: #e46000;
+}
+
+.position-interval {
+  color: #e46000;
+}
+
+.position-description {
+  margin-top: 1rem;
 }
 
 [data-theme="light"],
