@@ -108,6 +108,8 @@ h5 {
 .position-description {
   margin-top: 1rem;
   line-height: 1.25rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 [data-theme="light"],
