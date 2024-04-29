@@ -2,80 +2,69 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import "../styles/styles.scss";
+import experience from "../cv/experience.json";
 ---
 
 <Layout>
   <Navbar />
   <div class="container">
-    <section>
+    <header class="content-frame">
       <h1>¡Hola! Soy Santiago.</h1>
       <h4>
-        Un entusiasta de la informática, bajista aficionado y desarrollador
-        full-stack de profesión. Trabajo como SSr Software Engineer en Mercado
-        Libre.
+        Desarrollo experiencias como SSr Software Engineer en Mercado
+        Libre.<br> Soy un entusiasta de la informática, la música, la fotografía y la preservación audiovisual.
       </h4>
-    </section>
+    </header>
 
     <section>
       <h2>Experiencia profesional</h2>
-      <h3>Mercado Libre</h3>
-      <h4 class="position-name">SSr Software Engineer</h4>
-      <h5 class="position-interval">ene. 2023</h5>
-      <h4 class="position-name">Jr Software Developer</h4>
-      <h5 class="position-interval">jul. 2021 - ene. 2023</h5>
-      <h4 class="position-description">
-        → Responsable de la experiencia de consulta y modificación de datos de
-        cuenta de usuarios de la plataforma en 17 países de Latinoamérica. <br
-        /><br />
 
-        → Desarrollador front-end de los flujos en tecnologías de JavaScript
-        como React, Node y Express.<br /><br />
+      {
+        experience.professional.map((job) => (
+          <>
+            <h3>{job.company}</h3>
+            {job.positions.map((position) => (
+              <>
+                <h4 class="position-name">{position.name}</h4>
+                <h5 class="position-interval">{position.timespan}</h5>
+              </>
+            ))}
 
-        → Mantenedor de APIs de alto tráfico construidas en Golang y Kotlin bajo
-        la arquitectura de microservicios, en integración con bases de datos y
-        diversos servicios back-end.
-      </h4>
+            <div class="exp-description">
+              {job.description.map((item) => (
+                <>
+                  <h4 class="">→ {item}</h4>
+                </>
+              ))}
+            </div>
+          </>
+        ))
+      }
     </section>
 
     <section>
-      <h2>Recorrido académico</h2>
-      <h4>
-        LlanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogochdafsdfasdfasdfasdfasdfasdfasdfLlanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-        doloremque accusantium fuga placeat itaque exercitationem sint
-        voluptatibus soluta non magni. Neque vitae inventore, quibusdam hic
-        obcaecati exercitationem ratione sit deserunt?
-      </h4>
-    </section>
+      <h2>Educación</h2>
+      {
+        experience.academic.map((exp) => (
+          <>
+            <h3>{exp.institution}</h3>
+            {exp.degrees.map((degree) => (
+              <>
+                <h4 class="position-name">{degree.name}</h4>
+                <h5 class="position-interval">{degree.timespan}</h5>
+              </>
+            ))}
 
-    <section>
-      <h2>Recorrido académico</h2>
-      <h4>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-        doloremque accusantium fuga placeat itaque exercitationem sint
-        voluptatibus soluta non magni. Neque vitae inventore, quibusdam hic
-        obcaecati exercitationem ratione sit deserunt?
-      </h4>
-    </section>
-
-    <section>
-      <h2>Recorrido académico</h2>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-        doloremque accusantium fuga placeat itaque exercitationem sint
-        voluptatibus soluta non magni. Neque vitae inventore, quibusdam hic
-        obcaecati exercitationem ratione sit deserunt?
-      </h3>
-    </section>
-
-    <section>
-      <h2>Recorrido académico</h2>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-        doloremque accusantium fuga placeat itaque exercitationem sint
-        voluptatibus soluta non magni. Neque vitae inventore, quibusdam hic
-        obcaecati exercitationem ratione sit deserunt?
-      </h3>
+            <div class="exp-description">
+              {exp.description.map((item) => (
+                <>
+                  <h4 class="">→ {item}</h4>
+                </>
+              ))}
+            </div>
+          </>
+        ))
+      }
     </section>
   </div>
 </Layout>

@@ -1,0 +1,38 @@
+{
+  "professional": [
+    {
+      "company": "Mercado Libre",
+      "location": "Bogotá D.C., Colombia",
+      "positions": [
+        {
+          "name": "SSr. Software Engineer",
+          "timespan": "ene. 2023 - actualidad"
+        },
+        {
+          "name": "Jr. Software Developer",
+          "timespan": "jul. 2021 - ene. 2023"
+        }
+      ],
+      "description": [
+        "Responsable de la experiencia de consulta y modificación de datos de cuenta de usuarios de la plataforma en 17 países de Latinoamérica.",
+        "Mantenedor de proyectos front-end de los flujos en tecnologías de JavaScript como React, Node.js y Express.",
+        "Desarrollador de APIs de alto tráfico construidas en Golang y Kotlin bajo la arquitectura de microservicios, en integración con bases de datos y diversos servicios back-end."
+      ]
+    }
+  ],
+  "academic": [
+    {
+      "institution": "Universidad Nacional de Colombia - UNAL",
+      "location": "Bogotá D.C., Colombia",
+      "degrees": [
+        {
+          "name": "Ingeniería de Sistemas y Computación",
+          "timespan": "feb. 2018 - dic. 2023"
+        }
+      ],
+      "description": [
+        "Estudiante de cursos relacionados al desarrollo de proyectos de ingeniería de software, gestión de proyectos, y arquitectura y gobierno TIC."
+      ]
+    }
+  ]
+}

@@ -2,18 +2,18 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../../public/fonts/inter/InterVariable.woff2");
+  src: url("../../fonts/inter/InterVariable.woff2");
 }
 
 @font-face {
   font-family: "InterItalic";
   font-style: italic, oblique;
-  src: url("../../public/fonts/inter/InterVariable-Italic.woff2");
+  src: url("../../fonts/inter/InterVariable-Italic.woff2");
 }
 
 @font-face {
   font-family: "Redaction";
-  src: url("../../public/fonts/redaction/Redaction_35-Regular.woff2");
+  src: url("../../fonts/redaction/Redaction_35-Regular.woff2");
 }
 
 @mixin dotted-border {
@@ -33,13 +33,14 @@
   letter-spacing: -0.04em;
 }
 
-:root {
-  --pico-font-family-sans-serif: "Inter", sans-serif;
-}
-
-section {
+@mixin content-frame {
   padding: 2rem 3rem;
   @include dotted-border;
+}
+
+:root {
+  --pico-font-family-sans-serif: "Inter", sans-serif;
+  --pico-font-size: 1rem;
 }
 
 nav {
@@ -59,7 +60,7 @@ nav {
 }
 
 h1 {
-  --pico-font-size: 4rem;
+  --pico-font-size: 5rem;
   @include redaction;
 }
 
@@ -70,7 +71,7 @@ h2 {
 
 h3 {
   @include inter-semibold;
-  --pico-font-size: 1.4rem;
+  --pico-font-size: 1.25rem;
   --pico-typography-spacing-vertical: 0;
 }
 
@@ -86,9 +87,14 @@ h4 {
 h5 {
   --pico-typography-spacing-vertical: 0;
   --pico-font-family: "InterItalic", sans-serif;
-  --pico-font-weight: 300;
-  --pico-font-size: 0.75rem;
+  --pico-font-weight: 350;
+  --pico-font-size: 0.85rem;
   letter-spacing: -0.04em;
+}
+
+header, section {
+  @include content-frame;
+  margin-bottom: var(--pico-block-spacing-vertical);
 }
 
 .container {
@@ -105,7 +111,7 @@ h5 {
   color: #e46000;
 }
 
-.position-description {
+.exp-description {
   margin-top: 1rem;
   line-height: 1.25rem;
   overflow-wrap: break-word;
