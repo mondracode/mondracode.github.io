@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.5"
+    "astro": "^5.0.5",
+    "simpledotcss": "^2.3.3"
   }
 }
