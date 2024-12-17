@@ -1,5 +1,5 @@
 ---
-import '../styles/global.scss';
+import '../styles/global.css';
 import Home from '../layouts/Homepage.astro';
 import History from '../components/History.astro';
 
@@ -8,7 +8,8 @@ import academy from '../content/es/academy.json';
 ---
 
 <Home>
-  Hello!
+  <h1>Santiago Mondragón Gómez</h1>
+  <div class="tagline">ingeniero de software</div>
   <History src={work} />
   <History src={academy} />
 </Home>
