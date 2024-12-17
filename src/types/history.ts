@@ -1,4 +1,4 @@
-interface History {
+export interface History {
   heading: string;
   experiences: Experience[];
 }
