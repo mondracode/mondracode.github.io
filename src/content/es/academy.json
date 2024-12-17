@@ -1,12 +1,12 @@
 {
-    "title": "Experiencia",
-    "positions": [
+    "heading": "Experiencia",
+    "experiences": [
         {
-            "name": "Mercado Libre",
+            "title": "Mercado Libre",
             "location": "Bogotá, Colombia",
             "positions": [
                 {
-                    "name": "SSr. Software Engineer",
+                    "title": "SSr. Software Engineer",
                     "timespan": "ene. 2023 - actualidad",
                     "description": [
                         [

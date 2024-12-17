@@ -1,12 +1,12 @@
 {
-    "title": "Educación",
-    "positions": [
+    "heading": "Educación",
+    "experiences": [
         {
-            "name": "Universidad Nacional de Colombia - UNAL",
+            "title": "Universidad Nacional de Colombia - UNAL",
             "location": "Bogotá, Colombia",
-            "degrees": [
+            "positions": [
                 {
-                    "name": "Ingeniería de Sistemas y Computación",
+                    "title": "Ingeniería de Sistemas y Computación",
                     "timespan": "feb. 2018 - dic. 2023",
                     "description": [
                         "Promedio académico: 4.3/5.0"
