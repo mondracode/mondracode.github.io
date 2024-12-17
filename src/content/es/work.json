@@ -9,12 +9,10 @@
                     "title": "SSr. Software Engineer",
                     "timespan": "ene. 2023 - actualidad",
                     "description": [
-                        [
-                            "Desarrollo y mantengo un conjunto de microservicios REST de alto tráfico -construidos en Go y Kotlin- para mostrar y brindar acceso a funciones de modificación de datos personales en 17 países de América Latina.",
-                            "Diseñé y construí un panel de métricas de negocio usando Google Looker Studio y un conjunto de datos de BigQuery existente, que presenta visualizaciones de datos para indicadores clave de rendimiento de interacción del usuario, respaldando la toma de decisiones de liderazgo críticas.",
-                            "Lideré un plan estratégico para deprecar proyectos esenciales de cara al usuario de una manera fluida y transparente.",
-                            "Definí un conjunto de pruebas de integración utilizando Karate para garantizar la calidad y confiabilidad de las respuestas del backend dentro de un entorno Java proporcionado."
-                        ]
+                        "Desarrollo y mantengo un conjunto de microservicios REST de alto tráfico -construidos en Go y Kotlin- para mostrar y brindar acceso a funciones de modificación de datos personales en 17 países de América Latina.",
+                        "Diseñé y construí un panel de métricas de negocio usando Google Looker Studio y un conjunto de datos de BigQuery existente, que presenta visualizaciones de datos para indicadores clave de rendimiento de interacción del usuario, respaldando la toma de decisiones de liderazgo críticas.",
+                        "Lideré un plan estratégico para deprecar proyectos esenciales de cara al usuario de una manera fluida y transparente.",
+                        "Definí un conjunto de pruebas de integración utilizando Karate para garantizar la calidad y confiabilidad de las respuestas del backend dentro de un entorno Java proporcionado."
                     ]
                 },
                 {
