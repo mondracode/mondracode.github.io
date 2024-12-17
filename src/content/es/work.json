@@ -2,7 +2,7 @@
     "heading": "Experiencia",
     "experiences": [
         {
-            "title": "Mercado Libre",
+            "name": "Mercado Libre",
             "location": "Bogotá, Colombia",
             "positions": [
                 {
@@ -18,7 +18,7 @@
                     ]
                 },
                 {
-                    "name": "Jr. Software Developer",
+                    "title": "Jr. Software Developer",
                     "timespan": "jul. 2021 - ene. 2023",
                     "description": [
                         "Contribuí a la creación, despliegue inicial y mantenimiento ágil de una API de backend diseñada para lógica de negocio, desarrollada desde cero en Go, que sirve como un hub encargado de conectar proyectos orientados al usuario con múltiples experiencias de modificación de datos personales.",
