@@ -11,6 +11,7 @@
 .subheading {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .pos-title, .exp-name {
