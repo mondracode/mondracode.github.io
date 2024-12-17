@@ -1,28 +1,15 @@
 {
-    "heading": "Experiencia",
+    "heading": "Educación",
     "experiences": [
         {
-            "title": "Mercado Libre",
+            "title": "Universidad Nacional de Colombia - UNAL",
             "location": "Bogotá, Colombia",
             "positions": [
                 {
-                    "title": "SSr. Software Engineer",
-                    "timespan": "ene. 2023 - actualidad",
+                    "title": "Ingeniería de Sistemas y Computación",
+                    "timespan": "feb. 2018 - dic. 2023",
                     "description": [
-                        [
-                            "Desarrollo y mantengo un conjunto de microservicios REST de alto tráfico -construidos en Go y Kotlin- para mostrar y brindar acceso a funciones de modificación de datos personales en 17 países de América Latina.",
-                            "Diseñé y construí un panel de métricas de negocio usando Google Looker Studio y un conjunto de datos de BigQuery existente, que presenta visualizaciones de datos para indicadores clave de rendimiento de interacción del usuario, respaldando la toma de decisiones de liderazgo críticas.",
-                            "Lideré un plan estratégico para deprecar proyectos esenciales de cara al usuario de una manera fluida y transparente.",
-                            "Definí un conjunto de pruebas de integración utilizando Karate para garantizar la calidad y confiabilidad de las respuestas del backend dentro de un entorno Java proporcionado."
-                        ]
-                    ]
-                },
-                {
-                    "name": "Jr. Software Developer",
-                    "timespan": "jul. 2021 - ene. 2023",
-                    "description": [
-                        "Contribuí a la creación, despliegue inicial y mantenimiento ágil de una API de backend diseñada para lógica de negocio, desarrollada desde cero en Go, que sirve como un hub encargado de conectar proyectos orientados al usuario con múltiples experiencias de modificación de datos personales.",
-                        "Colaboré en el desarrollo y gestión del ciclo de vida de bases de código de frontend escritas en JavaScript y React, brindando soporte en migraciones de dependencias críticas para el negocio y asegurando el cumplimiento de estándares del entorno de desarrollo."
+                        "Promedio académico: 4.3/5.0"
                     ]
                 }
             ]
