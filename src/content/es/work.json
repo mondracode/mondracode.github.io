@@ -1,15 +1,18 @@
-[
-    {
-        "institution": "Universidad Nacional de Colombia - UNAL",
-        "location": "Bogotá, Colombia",
-        "degrees": [
-            {
-                "name": "Ingeniería de Sistemas y Computación",
-                "timespan": "feb. 2018 - dic. 2023",
-                "description": [
-                    "Promedio académico: 4.3/5.0"
-                ]
-            }
-        ]
-    }
-]
+{
+    "title": "Educación",
+    "positions": [
+        {
+            "name": "Universidad Nacional de Colombia - UNAL",
+            "location": "Bogotá, Colombia",
+            "degrees": [
+                {
+                    "name": "Ingeniería de Sistemas y Computación",
+                    "timespan": "feb. 2018 - dic. 2023",
+                    "description": [
+                        "Promedio académico: 4.3/5.0"
+                    ]
+                }
+            ]
+        }
+    ]
+}
