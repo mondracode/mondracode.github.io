@@ -8,6 +8,11 @@
     }
 }
 
+.subheading {
+    display: flex;
+    justify-content: space-between;
+}
+
 .pos-title, .exp-name {
     display: flex;
     justify-content: space-between;
