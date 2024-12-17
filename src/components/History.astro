@@ -9,18 +9,22 @@ const data = src as History;
   <h2>{src.heading}</h2>
   {
     data.experiences.map((e) => (
-      <div>
-        <h3>{e.name}</h3>
-        <h3>{e.location}</h3>
+      <div class="exp">
+        <div class="exp-name">
+          <h3>{e.name}</h3>
+          <h3>{e.location}</h3>
+        </div>
         {e.positions.map((p) => (
           <div>
-            <h4>{p.title}</h4>
-            <h4>{p.timespan}</h4>
-            {p.description.map((d) => (
-              <ul>
+            <div class="pos-title">
+              <h4>{p.title}</h4>
+              <h4>{p.timespan}</h4>
+            </div>
+            <ul>
+              {p.description.map((d) => (
                 <li>{d}</li>
-              </ul>
-            ))}
+              ))}
+            </ul>
           </div>
         ))}
       </div>

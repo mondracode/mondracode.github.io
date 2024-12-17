@@ -1,7 +1,48 @@
-.container {
-    max-width: 40rem;
+:root body {
+    font-family: 'Geist', sans-serif;
+    font-size: 1rem;
 }
 
-* {
-    font-family: 'Geist', sans-serif;
+.pos-title, .exp-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp {
+    border-top: 1px solid var(--border);
+}
+
+.tagline {
+    font-family: 'GeistLight';
+}
+
+h1 {
+    font-family: 'GeistBold';
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    font-family: 'GeistBold';
+    font-size: 1.1rem;
+    font-variant: small-caps;
+    margin: 1rem 0;
+}
+
+h3, h4 {
+    font-size: inherit;
+}
+
+h3 {
+    font-family: 'GeistMedium';
+    margin: 1rem 0 0.5rem 0
+}
+
+h4 {
+    font-family: 'GeistLight';
+    margin: 0;
+} 
+
+li {
+    margin-bottom: 1rem;
 }
