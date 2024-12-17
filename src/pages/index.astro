@@ -1,6 +1,14 @@
 ---
 import '../styles/global.scss';
 import Home from '../layouts/Homepage.astro';
+import History from '../components/History.astro';
+
+import work from '../content/es/work.json';
+import academy from '../content/es/academy.json';
 ---
 
-<Home> Hello! </Home>
+<Home>
+  Hello!
+  <History src={work} />
+  <History src={academy} />
+</Home>

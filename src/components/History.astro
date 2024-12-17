@@ -1,0 +1,29 @@
+---
+import type { History } from '../types/history';
+
+const { src } = Astro.props;
+const data = src as History;
+---
+
+<>
+  <h2>{src.heading}</h2>
+  {
+    data.experiences.map((e) => (
+      <div>
+        <h3>{e.name}</h3>
+        <h3>{e.location}</h3>
+        {e.positions.map((p) => (
+          <div>
+            <h4>{p.title}</h4>
+            <h4>{p.timespan}</h4>
+            {p.description.map((d) => (
+              <ul>
+                <li>{d}</li>
+              </ul>
+            ))}
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</>
