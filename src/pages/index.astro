@@ -1,0 +1,19 @@
+---
+import '../styles/global.css';
+import Home from '../layouts/Homepage.astro';
+import History from '../components/History.astro';
+
+import work from '../content/es/work.json';
+import academy from '../content/es/academy.json';
+---
+
+<Home>
+  <h1>Santiago Mondragón Gómez</h1>
+  <div class="subheading">
+    <div class="tagline">ingeniero de software</div>
+    <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+    <a href="mailto:santiago@mondracode.com">santiago@mondracode.com</a>
+  </div>
+  <History src={work} />
+  <History src={academy} />
+</Home>
