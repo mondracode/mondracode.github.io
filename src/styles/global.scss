@@ -1,0 +1,9 @@
+@use "@picocss/pico/scss";
+
+@font-face {
+    font-family: 'Geist';
+    src: url('/fonts/Geist[wght].woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
