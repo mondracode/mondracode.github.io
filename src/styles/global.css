@@ -1,37 +1,60 @@
-/* ── Font definitions ─────────────────────────────────────────────────────────
-   Replace the @font-face blocks below with your chosen typefaces.
-   Current placeholders: Geist (body/mono) with no heading font loaded yet.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── Fonts ───────────────────────────────────────────────────────────────────── */
 
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/Geist[wght].woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Chakra Petch";
+    src: url("/fonts/ChakraPetch-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
-/* TODO: add a @font-face (or Google Fonts <link>) for your serif heading font */
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("/fonts/ChakraPetch-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("/fonts/ChakraPetch-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 
-/* ── Design tokens ────────────────────────────────────────────────────────────
-   These are the only values you need to change to retheme the whole site.
-   ─────────────────────────────────────────────────────────────────────────── */
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("/fonts/ChakraPetch-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chakra Petch";
+    src: url("/fonts/ChakraPetch-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ── Design tokens ───────────────────────────────────────────────────────────── */
 
 :root {
-  /* FONTS */
-  --font-heading: Georgia, 'Times New Roman', serif; /* → swap for your serif  */
-  --font-body:    'Geist', 'Courier New', monospace; /* → swap for your mono   */
+    /* FONTS */
+    --font-heading: Georgia, "Times New Roman", serif;
+    --font-body: "Chakra Petch", sans-serif;
 
-  /* COLORS */
-  --color-bg:       #ffffff;
-  --color-bg-outer: #f0f0f0; /* → area outside the frame */
-  --color-text:     #1a1a1a;
-  --color-border:   #1a1a1a;
-  --color-muted:    #767676;
+    /* COLORS */
+    --color-bg: #ffffff;
+    --color-bg-outer: #f0f0f0;
+    --color-text: #1a1a1a;
+    --color-border: #1a1a1a;
+    --color-muted: #767676;
 
-  /* FRAME */
-  --frame-width:   680px;
-  --frame-padding: 3rem 2.5rem;
-
+    /* FRAME */
+    --frame-width: 680px;
+    --frame-padding: 3rem 2.5rem;
 }
