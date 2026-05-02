@@ -1,59 +1,135 @@
-:root body {
-    font-family: 'Geist', sans-serif;
-    font-size: 1rem;
+/* ── Base ──────────────────────────────────────────────────────────────────── */
 
-    footer {
-        margin-top: 1rem;
-        padding: 1.5rem 1rem;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--color-bg-outer);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+/* ── Frame ─────────────────────────────────────────────────────────────────── */
+
+.frame {
+    max-width: var(--frame-width);
+    min-height: 100vh;
+    margin: 2% auto;
+    padding: var(--frame-padding);
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 720px) {
+    .frame {
+        border: none;
+        padding: 2rem 1.25rem;
     }
 }
+
+/* ── Footer ────────────────────────────────────────────────────────────────── */
+
+footer {
+    margin-top: auto;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.75rem;
+    color: var(--color-muted);
+}
+
+/* ── Typography ────────────────────────────────────────────────────────────── */
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.25rem 0;
+}
+
+h2 {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    color: var(--color-muted);
+    margin: 2.5rem 0 0 0;
+}
+
+h3,
+h4 {
+    font-family: var(--font-body);
+    font-size: inherit;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4 {
+    font-weight: 300;
+    color: var(--color-muted);
+}
+
+a {
+    color: var(--color-text);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--color-muted);
+}
+
+/* ── Header block ──────────────────────────────────────────────────────────── */
 
 .subheading {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.pos-title, .exp-name {
-    display: flex;
-    justify-content: space-between;
-}
-
-.exp {
-    border-top: 1px solid var(--border);
+    gap: 0.2rem 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.8rem;
+    color: var(--color-muted);
 }
 
 .tagline {
-    font-family: 'GeistLight';
+    font-weight: 300;
 }
 
-h1 {
-    font-family: 'GeistBold';
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+/* ── History entries ───────────────────────────────────────────────────────── */
+
+.exp {
+    border-top: 1px solid var(--color-border);
+    padding: 1rem 0 0.5rem;
 }
 
-h2 {
-    font-family: 'GeistBold';
-    font-size: 1.1rem;
-    font-variant: small-caps;
-    margin: 1rem 0;
+.exp-name,
+.pos-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-h3, h4 {
-    font-size: inherit;
+.exp-name {
+    margin-bottom: 0.5rem;
 }
 
-h3 {
-    font-family: 'GeistMedium';
-    margin: 1rem 0 0.5rem 0
+ul {
+    margin: 0.5rem 0 0.75rem 0;
+    padding-left: 1.25rem;
 }
-
-h4 {
-    font-family: 'GeistLight';
-    margin: 0;
-} 
 
 li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
 }
