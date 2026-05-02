@@ -7,12 +7,16 @@ import academy from '../content/es/academy.json';
 ---
 
 <Home>
-  <h1>Santiago Mondragón Gómez</h1>
-  <div class="subheading">
-    <div class="tagline">ingeniero de software</div>
-    <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
-    <a href="mailto:santiago@mondracode.com">santiago@mondracode.com</a>
-  </div>
+  <header class="site-header">
+    <h1>Santiago Mondragón Gómez</h1>
+    <div class="site-meta">
+      <span class="tagline">ingeniero de software</span>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+        <a href="mailto:santiago@mondracode.com">santiago@mondracode.com</a>
+      </div>
+    </div>
+  </header>
   <History src={work} />
   <History src={academy} />
 </Home>

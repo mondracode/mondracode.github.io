@@ -1,4 +1,4 @@
-/* ── Base ──────────────────────────────────────────────────────────────────── */
+/* ── Reset ──────────────────────────────────────────────────────────────────── */
 
 *,
 *::before,
@@ -6,16 +6,28 @@
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Base ───────────────────────────────────────────────────────────────────── */
+
 html,
 body {
-    margin: 0;
     min-height: 100vh;
     background: var(--color-bg-outer);
     color: var(--color-text);
     font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.65;
 }
 
-/* ── Frame ─────────────────────────────────────────────────────────────────── */
+/* ── Frame ──────────────────────────────────────────────────────────────────── */
 
 .frame {
     max-width: var(--frame-width);
@@ -31,28 +43,29 @@ body {
 @media (max-width: 720px) {
     .frame {
         border: none;
+        margin: 0;
         padding: 2rem 1.25rem;
     }
 }
 
-/* ── Footer ────────────────────────────────────────────────────────────────── */
+/* ── Footer ─────────────────────────────────────────────────────────────────── */
 
 footer {
     margin-top: auto;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--color-border);
     font-size: 0.75rem;
     color: var(--color-muted);
 }
 
-/* ── Typography ────────────────────────────────────────────────────────────── */
+/* ── Typography ─────────────────────────────────────────────────────────────── */
 
 h1 {
     font-family: var(--font-heading);
     font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: -0.02em;
-    margin: 0 0 0.25rem 0;
+    color: var(--color-text);
 }
 
 h2 {
@@ -61,15 +74,14 @@ h2 {
     font-weight: 700;
     font-variant: small-caps;
     letter-spacing: 0.1em;
-    color: var(--color-muted);
-    margin: 2.5rem 0 0 0;
+    color: var(--color-text);
 }
 
 h3,
 h4 {
     font-family: var(--font-body);
     font-size: inherit;
-    margin: 0;
+    color: var(--color-text);
 }
 
 h3 {
@@ -79,6 +91,11 @@ h3 {
 h4 {
     font-weight: 300;
     color: var(--color-muted);
+}
+
+p,
+li {
+    color: var(--color-text);
 }
 
 a {
@@ -91,23 +108,49 @@ a:hover {
     color: var(--color-muted);
 }
 
-/* ── Header block ──────────────────────────────────────────────────────────── */
+/* ── Site header ─────────────────────────────────────────────────────────────
+   Name → tagline + contact links, separated from the content by a border.
+   ─────────────────────────────────────────────────────────────────────────── */
 
-.subheading {
+.site-header {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.site-header h1 {
+    margin-bottom: 1rem;
+}
+
+.site-meta {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     flex-wrap: wrap;
-    gap: 0.2rem 1rem;
-    margin-bottom: 2.5rem;
-    font-size: 0.8rem;
-    color: var(--color-muted);
+    gap: 0.25rem 1.5rem;
 }
 
 .tagline {
     font-weight: 300;
+    color: var(--color-muted);
 }
 
-/* ── History entries ───────────────────────────────────────────────────────── */
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--color-muted);
+}
+
+/* ── Section headings (versalitas) ───────────────────────────────────────────
+   Small-caps label sitting just above each section's entries.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.section-heading {
+    padding-top: 2rem;
+    padding-bottom: 0.75rem;
+}
+
+/* ── History entries ─────────────────────────────────────────────────────────── */
 
 .exp {
     border-top: 1px solid var(--color-border);
@@ -126,8 +169,8 @@ a:hover {
 }
 
 ul {
-    margin: 0.5rem 0 0.75rem 0;
     padding-left: 1.25rem;
+    margin-top: 0.5rem;
 }
 
 li {

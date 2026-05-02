@@ -34,14 +34,4 @@
   --frame-width:   680px;
   --frame-padding: 3rem 2.5rem;
 
-  /* ── PicoCSS overrides ──────────────────────────────────────────────────── */
-  --pico-font-family-sans-serif: var(--font-body);
-  --pico-font-family-monospace:  var(--font-body);
-  --pico-background-color:       var(--color-bg);
-  --pico-color:                  var(--color-text);
-  --pico-primary:                var(--color-text);
-  --pico-border-color:           var(--color-border);
-  --pico-muted-color:            var(--color-muted);
-  --pico-font-size:              0.875rem;
-  --pico-line-height:            1.65;
 }
