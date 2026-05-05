@@ -26,46 +26,13 @@ import summary from "../content/es/summary.json";
 
     <div class="summary">
         <p class="summary-body">
-            {summary.body.before}<span class="summary-em">{summary.body.emphasis}</span><br class="summary-break" />{summary.body.after}
+            {summary.body.before}<span class="summary-em"
+                >{summary.body.emphasis}</span
+            ><br class="summary-break" />{summary.body.after}
         </p>
     </div>
 
     <History src={work} />
-    <Skills src={skills} />
     <History src={academy} />
+    <Skills src={skills} />
 </Home>
-
-<style>
-    .summary {
-        padding: 2rem 0 2.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-    }
-
-    .summary-body {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--color-text);
-    }
-
-    @media (min-width: 721px) {
-        .summary-body {
-            max-width: 52ch;
-        }
-    }
-
-    .summary-break {
-        display: none;
-    }
-
-    @media (min-width: 721px) {
-        .summary-break {
-            display: block;
-        }
-    }
-
-    .summary-em {
-        color: var(--color-accent);
-    }
-</style>

@@ -152,6 +152,7 @@ a:hover {
     align-items: center;
     gap: 0.25rem;
     padding: 0;
+    margin-top: 1.5rem;
 }
 
 .section-heading::after {
@@ -195,4 +196,84 @@ ul {
 li {
     line-height: 1.4;
     margin-bottom: 1rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Summary ────────────────────────────────────────────────────────────────── */
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.summary-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+@media (min-width: 721px) {
+    .summary-body {
+        max-width: 52ch;
+    }
+}
+
+.summary-break {
+    display: none;
+}
+
+@media (min-width: 721px) {
+    .summary-break {
+        display: block;
+    }
+}
+
+.summary-em {
+    color: var(--color-accent);
+}
+
+/* ── Skills ─────────────────────────────────────────────────────────────────── */
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem 0 0;
+}
+
+.skill-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.skill-label {
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.skill-items {
+    color: var(--color-muted);
+    font-weight: 300;
+}
+
+.lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 0 0;
+}
+
+.lang-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.lang-sep {
+    color: var(--color-line);
 }
