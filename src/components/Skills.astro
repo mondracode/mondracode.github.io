@@ -1,0 +1,66 @@
+---
+const { src } = Astro.props;
+---
+
+<h2 class="section-heading">{src.heading}</h2>
+<div class="skills-grid">
+  {src.categories.map((c: { label: string; items: string }) => (
+    <div class="skill-row">
+      <span class="skill-label">{c.label}</span>
+      <span class="skill-items">{c.items}</span>
+    </div>
+  ))}
+</div>
+
+<h2 class="section-heading">{src.languagesHeading}</h2>
+<div class="lang-row">
+  {src.languages.map((l: { label: string; level: string }, i: number) => (
+    <span class="lang-entry">
+      <span class="skill-label">{l.label}</span>
+      <span class="skill-items">{l.level}</span>
+      {i < src.languages.length - 1 && <span class="lang-sep">·</span>}
+    </span>
+  ))}
+</div>
+
+<style>
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .skill-row {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .skill-label {
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .skill-items {
+    color: var(--color-muted);
+    font-weight: 300;
+  }
+
+  .lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 0 0.5rem;
+  }
+
+  .lang-entry {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .lang-sep {
+    color: var(--color-line);
+  }
+</style>

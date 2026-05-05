@@ -112,7 +112,6 @@ a:hover {
 
 .site-header {
     padding-bottom: 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .site-header h1 {
@@ -136,7 +135,14 @@ a:hover {
 .contact-links {
     display: flex;
     gap: 1.5rem;
-    color: var(--color-muted);
+}
+
+.contact-links a {
+    color: var(--color-accent);
+}
+
+.contact-links a:hover {
+    color: var(--color-text);
 }
 
 /* ── Section headings ───────────────────────────────────────────────────────── */

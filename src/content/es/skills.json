@@ -1,0 +1,16 @@
+{
+    "heading": "Habilidades Técnicas",
+    "categories": [
+        { "label": "Backend", "items": "Go, Kotlin, REST APIs, Microservicios serverless, DynamoDB, Concurrencia en Go" },
+        { "label": "Frontend", "items": "React, JavaScript, Node.js" },
+        { "label": "Testing", "items": "Pruebas unitarias y de integración, Code Coverage, CI/CD" },
+        { "label": "Data y Observabilidad", "items": "SQL, BigQuery, Looker Studio, Datadog" },
+        { "label": "Herramientas", "items": "Git, Docker" }
+    ],
+    "languagesHeading": "Idiomas",
+    "languages": [
+        { "label": "Español", "level": "Nativo" },
+        { "label": "Inglés", "level": "C2 (Avanzado)" },
+        { "label": "Portugués", "level": "Básico" }
+    ]
+}
