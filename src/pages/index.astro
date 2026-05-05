@@ -3,36 +3,81 @@ import Home from "../layouts/Homepage.astro";
 import History from "../components/History.astro";
 import Skills from "../components/Skills.astro";
 
-import work from "../content/es/work.json";
-import academy from "../content/es/academy.json";
-import skills from "../content/es/skills.json";
-import summary from "../content/es/summary.json";
+import workEs from "../content/es/work.json";
+import academyEs from "../content/es/academy.json";
+import skillsEs from "../content/es/skills.json";
+import summaryEs from "../content/es/summary.json";
+
+import workEn from "../content/en/work.json";
+import academyEn from "../content/en/academy.json";
+import skillsEn from "../content/en/skills.json";
+import summaryEn from "../content/en/summary.json";
 ---
 
 <Home>
     <header class="site-header">
         <h1>Santiago Mondragón Gómez</h1>
         <div class="site-meta">
-            <span class="tagline">ingeniero de software</span>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
-                <a href="https://github.com/mondracode">github</a>
-                <a href="mailto:mondracode.dev@gmail.com"
-                    >mondracode.dev@gmail.com</a
-                >
+            <span class="tagline" id="tagline-es">ingeniero de software</span>
+            <span class="tagline" id="tagline-en">software engineer</span>
+            <div class="header-right">
+                <div class="lang-toggle">
+                    <button id="btn-es" class="lang-btn">ES</button>
+                    <span class="lang-sep-toggle">·</span>
+                    <button id="btn-en" class="lang-btn">EN</button>
+                </div>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+                    <a href="https://github.com/mondracode">github</a>
+                    <a href="mailto:mondracode.dev@gmail.com"
+                        >mondracode.dev@gmail.com</a
+                    >
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="summary">
-        <p class="summary-body">
-            {summary.body.before}<span class="summary-em"
-                >{summary.body.emphasis}</span
-            ><br class="summary-break" />{summary.body.after}
-        </p>
+    <div id="content-es">
+        <div class="summary">
+            <p class="summary-body">
+                {summaryEs.body.before}<span class="summary-em"
+                    >{summaryEs.body.emphasis}</span
+                ><br class="summary-break" />{summaryEs.body.after}
+            </p>
+        </div>
+        <History src={workEs} />
+        <History src={academyEs} />
+        <Skills src={skillsEs} />
     </div>
 
-    <History src={work} />
-    <History src={academy} />
-    <Skills src={skills} />
+    <div id="content-en">
+        <div class="summary">
+            <p class="summary-body">
+                {summaryEn.body.before}<span class="summary-em"
+                    >{summaryEn.body.emphasis}</span
+                ><br class="summary-break" />{summaryEn.body.after}
+            </p>
+        </div>
+        <History src={workEn} />
+        <History src={academyEn} />
+        <Skills src={skillsEn} />
+    </div>
 </Home>
+
+<script>
+    function setLang(lang: string) {
+        localStorage.setItem('lang', lang);
+        document.documentElement.setAttribute('data-lang', lang);
+        document.documentElement.lang = lang;
+
+        document.getElementById('btn-es')!.classList.toggle('lang-btn--active', lang === 'es');
+        document.getElementById('btn-en')!.classList.toggle('lang-btn--active', lang === 'en');
+    }
+
+    document.getElementById('btn-es')!.addEventListener('click', () => setLang('es'));
+    document.getElementById('btn-en')!.addEventListener('click', () => setLang('en'));
+
+    const stored = localStorage.getItem('lang');
+    const preferred = stored ?? (navigator.language.startsWith('es') ? 'es' : 'en');
+    setLang(preferred);
+</script>

@@ -1,0 +1,31 @@
+{
+    "heading": "Experience",
+    "experiences": [
+        {
+            "name": "Mercado Libre",
+            "location": "Bogotá, Colombia",
+            "positions": [
+                {
+                    "title": "SSr. Software Engineer",
+                    "timespan": "Feb. 2023 – Present",
+                    "description": [
+                        "Drove end-to-end replacement of a 6-year-old tightly coupled legacy system: extended and evolved its Go successor service, applied concurrency patterns to improve throughput, and rebuilt feature parity in React, cutting response times from ~1s to ~300–400ms. This service now orchestrates all personal data self-management flows for millions of users across 17 countries.",
+                        "Owned refactoring of legacy Go services toward idiomatic patterns and cleaner dependency boundaries, making architecture decisions that improved maintainability and enabled safer long-term evolution.",
+                        "Defined and enforced automated testing standards across backend services, improving long-term maintainability and reducing regression risk in production.",
+                        "Extracted insights from BigQuery and built operational dashboards in Looker Studio, enabling visibility into critical KPIs and supporting data-driven decisions for engineering and product leadership.",
+                        "Coordinated strategic deprecation of user-facing legacy projects, managing safe migrations and minimizing customer impact during system retirement."
+                    ]
+                },
+                {
+                    "title": "Software Developer",
+                    "timespan": "Jul. 2021 – Jan. 2023",
+                    "description": [
+                        "Contributed to the design and initial deployment of the Go backend API for personal data self-management.",
+                        "Owned maintenance and evolution of a production React frontend, including spearheading a Node 10 to Node 14 runtime migration.",
+                        "Collaborated across backend and frontend teams to support dependency upgrades, environment compliance, and production stability in business-critical systems."
+                    ]
+                }
+            ]
+        }
+    ]
+}
