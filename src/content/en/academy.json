@@ -1,0 +1,18 @@
+{
+    "heading": "Education",
+    "experiences": [
+        {
+            "name": "Universidad Nacional de Colombia",
+            "location": "Bogotá, Colombia",
+            "positions": [
+                {
+                    "title": "Bachelor's Degree in Computer Systems Engineering · GPA: 4.3/5.0",
+                    "timespan": "Feb. 2018 – Dec. 2023",
+                    "description": [
+                        "Completed while working full-time as a Software Developer at Mercado Libre."
+                    ]
+                }
+            ]
+        }
+    ]
+}
