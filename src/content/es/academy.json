@@ -1,18 +1,18 @@
 {
-    "heading": "Educación",
-    "experiences": [
+  "heading": "Educación",
+  "experiences": [
+    {
+      "name": "Universidad Nacional de Colombia",
+      "location": "Bogotá, Colombia",
+      "positions": [
         {
-            "name": "Universidad Nacional de Colombia - UNAL",
-            "location": "Bogotá, Colombia",
-            "positions": [
-                {
-                    "title": "Ingeniería de Sistemas y Computación",
-                    "timespan": "feb. 2018 - dic. 2023",
-                    "description": [
-                        "Promedio académico: 4.3/5.0"
-                    ]
-                }
-            ]
+          "title": "Ingeniería de Sistemas y Computación • Promedio académico: 4.3/5.0",
+          "timespan": "feb. 2018 – dic. 2023",
+          "description": [
+            "Completado mientras trabajaba a tiempo completo como Ingeniero de Software en Mercado Libre."
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

@@ -7,20 +7,22 @@
             "positions": [
                 {
                     "title": "SSr. Software Engineer",
-                    "timespan": "ene. 2023 - actualidad",
+                    "timespan": "feb. 2023 – actualidad",
                     "description": [
-                        "Desarrollo y mantengo un conjunto de microservicios REST de alto tráfico -construidos en Go y Kotlin- para mostrar y brindar acceso a funciones de modificación de datos personales en 17 países de América Latina.",
-                        "Diseñé y construí un panel de métricas de negocio usando Google Looker Studio y un conjunto de datos de BigQuery existente, que presenta visualizaciones de datos para indicadores clave de rendimiento de interacción del usuario, respaldando la toma de decisiones de liderazgo críticas.",
-                        "Lideré un plan estratégico para deprecar proyectos esenciales de cara al usuario de una manera fluida y transparente.",
-                        "Definí un conjunto de pruebas de integración utilizando Karate para garantizar la calidad y confiabilidad de las respuestas del backend dentro de un entorno Java proporcionado."
+                        "Impulsé el reemplazo completo de un sistema legacy fuertemente acoplado de 6 años: extendí y desarrollé el servicio backend en Go, apliqué patrones de concurrencia para mejorar el throughput, y reconstruí paridad de funcionalidades en React, reduciendo los tiempos de respuesta de ~1s a ~300–400ms. Este servicio hoy orquesta todos los flujos de autogestión de datos personales de millones de usuarios en 17 países.",
+                        "Fui responsable de la refactorización de servicios Go legacy hacia patrones idiomáticos y con límites de dependencias más claros, tomando decisiones de arquitectura que mejoraron la mantenibilidad y habilitaron una evolución más segura del sistema.",
+                        "Definí y apliqué estándares de pruebas automatizadas en los servicios backend, mejorando la mantenibilidad a largo plazo y reduciendo el riesgo de regresiones en producción.",
+                        "Extraje insights desde BigQuery y construí dashboards operativos en Looker Studio, habilitando visibilidad sobre KPIs críticos y apoyando decisiones basadas en métricas para ingeniería y producto.",
+                        "Coordiné el deprecado estratégico de proyectos legacy orientados al usuario, gestionando migraciones seguras y minimizando el impacto en producción durante el retiro de sistemas."
                     ]
                 },
                 {
-                    "title": "Jr. Software Developer",
-                    "timespan": "jul. 2021 - ene. 2023",
+                    "title": "Software Developer",
+                    "timespan": "jul. 2021 – ene. 2023",
                     "description": [
-                        "Contribuí a la creación, despliegue inicial y mantenimiento ágil de una API de backend diseñada para lógica de negocio, desarrollada desde cero en Go, que sirve como un hub encargado de conectar proyectos orientados al usuario con múltiples experiencias de modificación de datos personales.",
-                        "Colaboré en el desarrollo y gestión del ciclo de vida de bases de código de frontend escritas en JavaScript y React, brindando soporte en migraciones de dependencias críticas para el negocio y asegurando el cumplimiento de estándares del entorno de desarrollo."
+                        "Contribuí al diseño e implementación inicial de la API backend en Go para autogestión de datos personales.",
+                        "Fui responsable del mantenimiento y evolución de un frontend React en producción, incluyendo encabezar una migración de runtime de Node 10 a Node 14.",
+                        "Colaboré entre equipos de backend y frontend para apoyar actualizaciones de dependencias, cumplimiento de entornos y estabilidad en producción de sistemas críticos para el negocio."
                     ]
                 }
             ]

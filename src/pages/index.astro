@@ -1,19 +1,38 @@
 ---
-import '../styles/global.css';
-import Home from '../layouts/Homepage.astro';
-import History from '../components/History.astro';
+import Home from "../layouts/Homepage.astro";
+import History from "../components/History.astro";
+import Skills from "../components/Skills.astro";
 
-import work from '../content/es/work.json';
-import academy from '../content/es/academy.json';
+import work from "../content/es/work.json";
+import academy from "../content/es/academy.json";
+import skills from "../content/es/skills.json";
+import summary from "../content/es/summary.json";
 ---
 
 <Home>
-  <h1>Santiago Mondragón Gómez</h1>
-  <div class="subheading">
-    <div class="tagline">ingeniero de software</div>
-    <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
-    <a href="mailto:santiago@mondracode.com">santiago@mondracode.com</a>
-  </div>
-  <History src={work} />
-  <History src={academy} />
+    <header class="site-header">
+        <h1>Santiago Mondragón Gómez</h1>
+        <div class="site-meta">
+            <span class="tagline">ingeniero de software</span>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+                <a href="https://github.com/mondracode">github</a>
+                <a href="mailto:mondracode.dev@gmail.com"
+                    >mondracode.dev@gmail.com</a
+                >
+            </div>
+        </div>
+    </header>
+
+    <div class="summary">
+        <p class="summary-body">
+            {summary.body.before}<span class="summary-em"
+                >{summary.body.emphasis}</span
+            ><br class="summary-break" />{summary.body.after}
+        </p>
+    </div>
+
+    <History src={work} />
+    <History src={academy} />
+    <Skills src={skills} />
 </Home>

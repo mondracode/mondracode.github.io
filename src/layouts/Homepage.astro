@@ -1,21 +1,34 @@
 ---
-import 'simpledotcss/simple.css';
-
 import '../styles/global.css';
 import '../styles/layout.css';
+
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
     <title>Santiago Mondragón Gómez</title>
   </head>
   <body>
-    <main class="container">
-      <slot />
-    </main>
+    <div class="frame">
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-left">
+            <span class="footer-name">Santiago Mondragón Gómez</span>
+            <span class="footer-year">{year}</span>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+            <a href="https://github.com/mondracode">github</a>
+            <a href="mailto:mondracode.dev@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
-  <footer>2024 - Santiago Mondragón Gómez</footer>
 </html>

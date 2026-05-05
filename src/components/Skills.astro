@@ -1,0 +1,24 @@
+---
+const { src } = Astro.props;
+---
+
+<h2 class="section-heading">{src.heading}</h2>
+<div class="skills-grid">
+  {src.categories.map((c: { label: string; items: string }) => (
+    <div class="skill-row">
+      <span class="skill-label">{c.label}</span>
+      <span class="skill-items">{c.items}</span>
+    </div>
+  ))}
+</div>
+
+<h2 class="section-heading">{src.languagesHeading}</h2>
+<div class="lang-row">
+  {src.languages.map((l: { label: string; level: string }, i: number) => (
+    <span class="lang-entry">
+      <span class="skill-label">{l.label}</span>
+      <span class="skill-items">{l.level}</span>
+      {i < src.languages.length - 1 && <span class="lang-sep">·</span>}
+    </span>
+  ))}
+</div>
