@@ -48,6 +48,18 @@
     font-display: swap;
 }
 
+/* ── Language visibility ────────────────────────────────────────────────────── */
+
+:root[data-lang="en"] #content-es,
+:root[data-lang="en"] #tagline-es {
+    display: none;
+}
+
+:root[data-lang="es"] #content-en,
+:root[data-lang="es"] #tagline-en {
+    display: none;
+}
+
 /* ── Design tokens ───────────────────────────────────────────────────────────── */
 
 :root {

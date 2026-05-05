@@ -171,6 +171,44 @@ a:hover {
     color: var(--color-muted);
 }
 
+.header-right {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--color-muted);
+    line-height: 1;
+}
+
+.lang-btn--active {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.lang-btn:not(.lang-btn--active):hover {
+    color: var(--color-text);
+}
+
+.lang-sep-toggle {
+    font-size: 0.75rem;
+    color: var(--color-line);
+}
+
 .contact-links {
     display: flex;
     flex-wrap: wrap;
