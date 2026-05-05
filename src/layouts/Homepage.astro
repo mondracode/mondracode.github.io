@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/layout.css';
+
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -14,7 +16,19 @@ import '../styles/layout.css';
       <main>
         <slot />
       </main>
-      <footer>2024 — Santiago Mondragón Gómez</footer>
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-left">
+            <span class="footer-name">Santiago Mondragón Gómez</span>
+            <span class="footer-year">{year}</span>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/mondracode/">linkedin</a>
+            <a href="https://github.com/mondracode">github</a>
+            <a href="mailto:mondracode.dev@gmail.com">email</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
