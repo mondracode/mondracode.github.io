@@ -40,11 +40,19 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Baskervville";
+    src: url("/fonts/Baskervville-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ── Design tokens ───────────────────────────────────────────────────────────── */
 
 :root {
     /* FONTS */
-    --font-heading: Georgia, "Times New Roman", serif;
+    --font-heading: "Baskervville", Georgia, serif;
     --font-body: "Chakra Petch", sans-serif;
 
     /* COLORS */
@@ -52,9 +60,11 @@
     --color-bg-outer: #f0f0f0;
     --color-text: #1a1a1a;
     --color-border: #1a1a1a;
+    --color-line: #d4d4d4;
+    --color-accent: #c0392b;
     --color-muted: #767676;
 
     /* FRAME */
-    --frame-width: 680px;
-    --frame-padding: 3rem 2.5rem;
+    --frame-width: 750px;
+    --frame-padding: 2rem 2.5rem;
 }
