@@ -25,12 +25,9 @@ import summary from "../content/es/summary.json";
     </header>
 
     <div class="summary">
-        <p class="summary-lead">
-            {summary.lead.before}<span class="summary-em"
-                >{summary.lead.emphasis}</span
-            >{summary.lead.after}
+        <p class="summary-body">
+            {summary.body.before}<span class="summary-em">{summary.body.emphasis}</span><br class="summary-break" />{summary.body.after}
         </p>
-        <p class="summary-body">{summary.body}</p>
     </div>
 
     <History src={work} />
@@ -40,26 +37,35 @@ import summary from "../content/es/summary.json";
 
 <style>
     .summary {
-        padding: 1rem 0 1.5rem;
+        padding: 2rem 0 2.5rem;
         display: flex;
         flex-direction: column;
-        gap: 0.35rem;
+        gap: 0.6rem;
     }
 
-    .summary-lead {
-        font-weight: 550;
-        font-size: 1.25rem;
+    .summary-body {
+        font-size: 1rem;
+        line-height: 1.7;
         color: var(--color-text);
+    }
+
+    @media (min-width: 721px) {
+        .summary-body {
+            max-width: 52ch;
+        }
+    }
+
+    .summary-break {
+        display: none;
+    }
+
+    @media (min-width: 721px) {
+        .summary-break {
+            display: block;
+        }
     }
 
     .summary-em {
         color: var(--color-accent);
-    }
-
-    .summary-body {
-        line-height: 1.5;
-        font-size: 0.9rem;
-        color: var(--color-text);
-        font-style: italic;
     }
 </style>
