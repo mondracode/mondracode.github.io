@@ -173,7 +173,8 @@ a:hover {
 
 .contact-links {
     display: flex;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
 }
 
 .contact-links a {
@@ -278,26 +279,24 @@ li:last-child {
 /* ── Skills ─────────────────────────────────────────────────────────────────── */
 
 .skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 0.35rem 0.6rem;
     padding: 0.75rem 0 0;
 }
 
 .skill-row {
-    display: flex;
-    gap: 0.6rem;
+    display: contents;
 }
 
 .skill-label {
     font-weight: 500;
-    white-space: nowrap;
-    flex-shrink: 0;
 }
 
 .skill-items {
     color: var(--color-muted);
     font-weight: 300;
+    min-width: 0;
 }
 
 .lang-row {
