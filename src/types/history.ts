@@ -5,7 +5,7 @@ export interface History {
 
 interface Experience {
   name: string;
-  location: string;
+  location?: string;
   positions: Position[];
 }
 
