@@ -1,48 +1,66 @@
-# Astro Starter Kit: Basics
+# mondracode.com
+
+Personal CV and portfolio site for Santiago Mondragon Gomez, built with [Astro](https://astro.build/) and deployed to GitHub Pages at [mondracode.com](https://mondracode.com).
+
+The site supports Spanish and English. It selects the visitor's browser language by default and stores a manual language selection in `localStorage`.
+
+## Requirements
+
+- Node.js 20 or later
+- npm
+
+## Getting started
+
+Install dependencies and start the development server:
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+The site is available at `http://localhost:4321`.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server. |
+| `npm run build` | Build the production site into `dist/`. |
+| `npm run preview` | Preview the production build locally. |
+| `npm run astro -- --help` | Show Astro CLI help. |
 
-## 🚀 Project Structure
+## Content
 
-Inside of your Astro project, you'll see the following folders and files:
+Resume content is stored as JSON under `src/content/`:
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/content/
+├── en/
+│   ├── academy.json
+│   ├── skills.json
+│   ├── summary.json
+│   └── work.json
+└── es/
+    ├── academy.json
+    ├── skills.json
+    ├── summary.json
+    └── work.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Keep the English and Spanish files in sync when adding or changing experience, education, skills, or the profile summary.
 
-## 🧞 Commands
+## Project structure
 
-All commands are run from the root of the project, from a terminal:
+```text
+src/
+├── components/  # Reusable resume sections
+├── content/     # Localized resume data
+├── layouts/     # Shared page shell
+├── pages/       # Astro routes
+├── styles/      # Global and layout styles
+└── types/       # TypeScript data types
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Deployment
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and deploys it to GitHub Pages.
