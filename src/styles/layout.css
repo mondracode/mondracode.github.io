@@ -248,7 +248,7 @@ a:hover {
 
 .exp {
     border-top: 1px solid var(--color-line);
-    padding: 1rem 0 0.5rem;
+    padding: 1rem 0 0.75rem;
 }
 
 .exp-name,
