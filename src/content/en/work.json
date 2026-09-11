@@ -2,6 +2,17 @@
     "heading": "Experience",
     "experiences": [
         {
+            "name": "Auvik",
+            "location": "Bogotá, Colombia",
+            "positions": [
+                {
+                    "title": "Software Developer",
+                    "timespan": "Sep. 2026 – Present",
+                    "description": []
+                }
+            ]
+        },
+        {
             "name": "Mercado Libre",
             "location": "Bogotá, Colombia",
             "positions": [

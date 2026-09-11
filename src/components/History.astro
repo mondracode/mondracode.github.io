@@ -12,7 +12,7 @@ const data = src as History;
       <div class="exp">
         <div class="exp-name">
           <h3>{e.name}</h3>
-          <h3>{e.location}</h3>
+          {e.location && <h3>{e.location}</h3>}
         </div>
         {e.positions.map((p) => (
           <div class="pos">
@@ -20,11 +20,13 @@ const data = src as History;
               <h4>{p.title}</h4>
               <h4>{p.timespan}</h4>
             </div>
-            <ul>
-              {p.description.map((d) => (
-                <li>{d}</li>
-              ))}
-            </ul>
+            {p.description.length > 0 && (
+              <ul>
+                {p.description.map((d) => (
+                  <li>{d}</li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </div>
