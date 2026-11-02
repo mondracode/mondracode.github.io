@@ -1,24 +1,37 @@
 ---
-const { src } = Astro.props;
+interface Props {
+  src: {
+    heading: string;
+    categories: { label: string; items: string }[];
+    languagesHeading: string;
+    languages: { label: string; level: string }[];
+  };
+  id: string;
+}
+
+const { src, id } = Astro.props;
 ---
 
-<h2 class="section-heading">{src.heading}</h2>
-<div class="skills-grid">
-  {src.categories.map((c: { label: string; items: string }) => (
-    <div class="skill-row">
-      <span class="skill-label">{c.label}</span>
-      <span class="skill-items">{c.items}</span>
-    </div>
-  ))}
-</div>
+<section class="resume-section" aria-labelledby={`${id}-heading`}>
+  <h2 class="section-heading" id={`${id}-heading`}>{src.heading}</h2>
+  <dl class="skills-grid">
+    {src.categories.map((c) => (
+      <div class="skill-row">
+        <dt class="skill-label">{c.label}</dt>
+        <dd class="skill-items">{c.items}</dd>
+      </div>
+    ))}
+  </dl>
+</section>
 
-<h2 class="section-heading">{src.languagesHeading}</h2>
-<div class="lang-row">
-  {src.languages.map((l: { label: string; level: string }, i: number) => (
-    <span class="lang-entry">
-      <span class="skill-label">{l.label}</span>
-      <span class="skill-items">{l.level}</span>
-      {i < src.languages.length - 1 && <span class="lang-sep">·</span>}
-    </span>
-  ))}
-</div>
+<section class="resume-section languages-section" aria-labelledby={`${id}-languages-heading`}>
+  <h2 class="section-heading" id={`${id}-languages-heading`}>{src.languagesHeading}</h2>
+  <dl class="lang-row">
+    {src.languages.map((l) => (
+      <div class="lang-entry">
+        <dt class="skill-label">{l.label}</dt>
+        <dd class="skill-items">{l.level}</dd>
+      </div>
+    ))}
+  </dl>
+</section>

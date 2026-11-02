@@ -8,7 +8,9 @@
                 {
                     "title": "Software Developer",
                     "timespan": "Sep. 2026 – Present",
-                    "description": []
+                    "description": [
+                        "Building the user-facing portion of the product as part of the Portal team."
+                    ]
                 }
             ]
         },
@@ -18,22 +20,21 @@
             "positions": [
                 {
                     "title": "SSr. Software Engineer",
-                    "timespan": "Feb. 2023 – Present",
+                    "timespan": "Feb. 2023 – Jul. 2026",
                     "description": [
-                        "Drove end-to-end replacement of a 6-year-old tightly coupled legacy system: extended and evolved its Go successor service, applied concurrency patterns to improve throughput, and rebuilt feature parity in React, cutting response times from ~1s to ~300–400ms. This service now orchestrates all personal data self-management flows for millions of users across 17 countries.",
-                        "Owned refactoring of legacy Go services toward idiomatic patterns and cleaner dependency boundaries, making architecture decisions that improved maintainability and enabled safer long-term evolution.",
-                        "Defined and enforced automated testing standards across backend services, improving long-term maintainability and reducing regression risk in production.",
-                        "Extracted insights from BigQuery and built operational dashboards in Looker Studio, enabling visibility into critical KPIs and supporting data-driven decisions for engineering and product leadership.",
-                        "Coordinated strategic deprecation of user-facing legacy projects, managing safe migrations and minimizing customer impact during system retirement."
+                        "Cut response times from ~1 second to 300–400 ms by replacing a six-year-old legacy system with Go services and a React frontend, supporting personal-data self-management for millions of users across 17 countries.",
+                        "Refactored Go services with idiomatic patterns and clearer dependency boundaries, and established automated testing standards to reduce regression risk.",
+                        "Built BigQuery-backed dashboards in Looker Studio to give engineering and product leaders visibility into critical operational KPIs.",
+                        "Coordinated migrations and retirement of user-facing legacy systems while minimizing customer impact."
                     ]
                 },
                 {
                     "title": "Software Developer",
                     "timespan": "Jul. 2021 – Jan. 2023",
                     "description": [
-                        "Contributed to the design and initial deployment of the Go backend API for personal data self-management.",
-                        "Owned maintenance and evolution of a production React frontend, including spearheading a Node 10 to Node 14 runtime migration.",
-                        "Collaborated across backend and frontend teams to support dependency upgrades, environment compliance, and production stability in business-critical systems."
+                        "Helped design and launch the Go API for personal-data self-management.",
+                        "Maintained and evolved a production React frontend, leading its Node.js 10 to 14 runtime migration.",
+                        "Partnered with backend and frontend teams on dependency upgrades and production stability for business-critical systems."
                     ]
                 }
             ]
