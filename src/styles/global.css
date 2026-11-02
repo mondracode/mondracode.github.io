@@ -55,8 +55,12 @@
     display: none;
 }
 
-:root[data-lang="es"] #content-en,
-:root[data-lang="es"] #tagline-en {
+:root:not([data-lang="en"]) #content-en,
+:root:not([data-lang="en"]) #tagline-en {
+    display: none;
+}
+
+:root:not([data-lang]) .lang-toggle {
     display: none;
 }
 
@@ -74,9 +78,10 @@
     --color-border: #1a1a1a;
     --color-line: #d4d4d4;
     --color-accent: #5c47fc;
-    --color-muted: #767676;
+    --color-accent-rule: #b6acf0;
+    --color-muted: #626262;
 
     /* FRAME */
-    --frame-width: 750px;
-    --frame-padding: 2rem 2.5rem;
+    --frame-width: 800px;
+    --frame-padding: clamp(1.25rem, 5vw, 3.25rem);
 }

@@ -1,24 +1,29 @@
 ---
 import type { History } from '../types/history';
 
-const { src } = Astro.props;
-const data = src as History;
+interface Props {
+  src: History;
+  id: string;
+  compact?: boolean;
+}
+
+const { src: data, id, compact = false } = Astro.props;
 ---
 
-<>
-  <h2 class="section-heading">{src.heading}</h2>
+<section class:list={['resume-section', 'history-section', { 'history-section--compact': compact }]} aria-labelledby={`${id}-heading`}>
+  <h2 class="section-heading" id={`${id}-heading`}>{data.heading}</h2>
   {
-    data.experiences.map((e) => (
-      <div class="exp">
+    data.experiences.map((e, index) => (
+      <article class="exp" aria-labelledby={`${id}-${index}`}>
         <div class="exp-name">
-          <h3>{e.name}</h3>
-          {e.location && <h3>{e.location}</h3>}
+          <h3 id={`${id}-${index}`}>{e.name}</h3>
+          {e.location && <p class="exp-location">{e.location}</p>}
         </div>
         {e.positions.map((p) => (
           <div class="pos">
             <div class="pos-title">
-              <h4>{p.title}</h4>
-              <h4>{p.timespan}</h4>
+              <h4 class="pos-role">{p.title}</h4>
+              <p class="pos-date">{p.timespan}</p>
             </div>
             {p.description.length > 0 && (
               <ul>
@@ -29,7 +34,7 @@ const data = src as History;
             )}
           </div>
         ))}
-      </div>
+      </article>
     ))
   }
-</>
+</section>

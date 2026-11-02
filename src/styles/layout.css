@@ -24,15 +24,14 @@ body {
     color: var(--color-text);
     font-family: var(--font-body);
     font-size: 1rem;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 /* ── Frame ──────────────────────────────────────────────────────────────────── */
 
 .frame {
     max-width: var(--frame-width);
-    min-height: 100vh;
-    margin: 2% auto;
+    margin: 2.5rem auto;
     padding: var(--frame-padding);
     background: var(--color-bg);
     border: 1px solid var(--color-border);
@@ -44,16 +43,16 @@ body {
     .frame {
         border: none;
         margin: 0;
-        padding: 2rem 1.25rem;
+        padding: 2rem var(--frame-padding);
     }
 }
 
 /* ── Footer ─────────────────────────────────────────────────────────────────── */
 
 footer {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     padding-top: 1.25rem;
-    border-top: 2px dotted var(--color-accent);
+    border-top: 1px solid var(--color-line);
 }
 
 .footer-inner {
@@ -66,6 +65,7 @@ footer {
 
 .footer-left {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     gap: 0.75rem;
 }
@@ -77,13 +77,13 @@ footer {
 }
 
 .footer-year {
-    font-size: 0.7rem;
-    font-weight: 300;
+    font-size: 0.8rem;
     color: var(--color-muted);
 }
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.25rem;
 }
 
@@ -109,7 +109,7 @@ h1 {
 
 h2 {
     font-family: var(--font-body);
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -128,8 +128,7 @@ h3 {
 }
 
 h4 {
-    font-weight: 300;
-    color: var(--color-muted);
+    font-weight: 500;
 }
 
 p,
@@ -147,185 +146,245 @@ a:hover {
     color: var(--color-muted);
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
 /* ── Site header ────────────────────────────────────────────────────────────── */
 
 .site-header {
-    padding-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--color-line);
 }
 
 .site-header h1 {
-    margin-bottom: 0.3rem;
-    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.site-identity {
+    min-width: 0;
 }
 
 .site-meta {
+    grid-column: 1 / -1;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    flex-wrap: wrap;
-    gap: 0.25rem 1.5rem;
+    gap: 0.75rem 1.5rem;
+    min-width: 0;
 }
 
 .tagline {
-    font-weight: 300;
+    font-size: 1rem;
     color: var(--color-muted);
-}
-
-.header-right {
-    display: flex;
-    align-items: baseline;
-    gap: 1.5rem;
 }
 
 .lang-toggle {
     display: flex;
     align-items: baseline;
-    gap: 0.3rem;
 }
 
 .lang-btn {
     background: none;
     border: none;
-    padding: 0;
+    padding: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
     cursor: pointer;
     font-family: var(--font-body);
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--color-muted);
     line-height: 1;
 }
 
-.lang-btn--active {
+.lang-btn[aria-pressed="true"] {
     color: var(--color-accent);
     font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 0.25rem;
 }
 
-.lang-btn:not(.lang-btn--active):hover {
+.lang-btn[aria-pressed="false"]:hover {
     color: var(--color-text);
 }
 
 .lang-sep-toggle {
     font-size: 0.75rem;
-    color: var(--color-line);
+    color: var(--color-muted);
 }
 
 .contact-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.25rem 1.5rem;
+    gap: 0.4rem 1rem;
+    font-size: 0.875rem;
+    min-width: 0;
 }
 
 .contact-links a {
     color: var(--color-accent);
+    overflow-wrap: anywhere;
 }
 
 .contact-links a:hover {
     color: var(--color-text);
 }
 
-/* ── Section headings ───────────────────────────────────────────────────────── */
+/* ── Sections ───────────────────────────────────────────────────────────────── */
+
+.resume-section {
+    margin-top: 2.75rem;
+}
 
 .section-heading {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    padding: 0;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .section-heading::after {
     content: "";
     flex: 1;
+    min-width: 1rem;
     height: 0;
-    border-top: 2px dotted var(--color-accent);
-}
-
-.section-heading + .exp {
-    border-top: none;
+    border-top: 2px dotted var(--color-accent-rule);
 }
 
 /* ── History entries ─────────────────────────────────────────────────────────── */
 
 .exp {
+    min-width: 0;
+}
+
+.exp + .exp {
+    margin-top: 2rem;
+    padding-top: 1.75rem;
     border-top: 1px solid var(--color-line);
-    padding: 1rem 0 0.75rem;
 }
 
 .exp-name,
 .pos-title {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    align-items: baseline;
+    gap: 0.25rem 1.5rem;
 }
 
 .exp-name {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.exp-name h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.exp-location,
+.pos-date {
+    flex-shrink: 0;
+    color: var(--color-muted);
+    font-size: 0.8125rem;
+}
+
+.pos-role {
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.pos-date {
+    font-variant-numeric: tabular-nums;
 }
 
 .pos + .pos {
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
 }
 
-ul {
-    padding-left: 1.25rem;
-    margin-top: 0.5rem;
+.pos ul {
+    padding-left: 1.1rem;
+    margin-top: 0.75rem;
+    font-size: 0.9375rem;
 }
 
-li {
-    line-height: 1.4;
-    margin-bottom: 1rem;
+.pos li {
+    line-height: 1.6;
+    margin-bottom: 0.65rem;
+    padding-left: 0.2rem;
 }
 
-li:last-child {
+.pos li::marker {
+    color: var(--color-muted);
+    font-size: 0.75em;
+}
+
+.pos li:last-child {
     margin-bottom: 0;
+}
+
+/* Long degree names read better with dates below rather than squeezed beside them. */
+.history-section--compact .pos-title {
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.history-section--compact .pos-role {
+    font-weight: 400;
 }
 
 /* ── Summary ────────────────────────────────────────────────────────────────── */
 
 .summary {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    padding-top: 1.75rem;
 }
 
 .summary-body {
-    font-size: 1rem;
+    max-width: 60ch;
+    font-size: 1.0625rem;
     line-height: 1.7;
     color: var(--color-text);
 }
 
-@media (min-width: 721px) {
-    .summary-body {
-        max-width: 52ch;
-    }
-}
-
-.summary-break {
-    display: none;
-}
-
-@media (min-width: 721px) {
-    .summary-break {
-        display: block;
-    }
-}
-
 .summary-em {
     color: var(--color-accent);
+    font-weight: 500;
 }
 
 /* ── Skills ─────────────────────────────────────────────────────────────────── */
 
 .skills-grid {
-    display: grid;
-    align-items: center;
-    grid-template-columns: min-content 1fr;
-    gap: 0.35rem 0.6rem;
-    padding: 0.75rem 0 0;
+    font-size: 0.875rem;
 }
 
 .skill-row {
-    display: contents;
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    align-items: baseline;
+    gap: 0.25rem 1.25rem;
+    padding: 0.55rem 0;
+}
+
+.skill-row + .skill-row {
+    border-top: 1px solid var(--color-line);
+}
+
+.skill-row:first-child {
+    padding-top: 0;
+}
+
+.skill-row:last-child {
+    padding-bottom: 0;
 }
 
 .skill-label {
@@ -334,23 +393,153 @@ li:last-child {
 
 .skill-items {
     color: var(--color-muted);
-    font-weight: 300;
     min-width: 0;
+}
+
+.languages-section {
+    margin-top: 2rem;
 }
 
 .lang-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    padding: 0.75rem 0 0;
+    gap: 0.75rem 2rem;
+    font-size: 0.875rem;
 }
 
 .lang-entry {
     display: flex;
-    align-items: center;
-    gap: 0.4rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
 }
 
-.lang-sep {
-    color: var(--color-line);
+/* ── Narrow screens ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+    .site-header {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    .lang-toggle {
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .site-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-section {
+        margin-top: 2.25rem;
+    }
+
+    .exp-name,
+    .pos-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+    }
+
+    .skill-row {
+        grid-template-columns: 1fr;
+        padding: 0.75rem 0;
+    }
+
+    .pos-date,
+    .exp-location {
+        flex-shrink: 1;
+    }
+}
+
+/* ── Print ──────────────────────────────────────────────────────────────────── */
+
+@media print {
+    @page {
+        margin: 15mm;
+    }
+
+    html,
+    body {
+        min-height: auto;
+        background: #fff;
+        color: #000;
+        font-size: 10pt;
+    }
+
+    :root {
+        --color-text: #000;
+        --color-muted: #444;
+        --color-accent: #000;
+        --color-accent-rule: #bbb;
+        --color-line: #bbb;
+    }
+
+    .frame {
+        display: block;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: #fff;
+    }
+
+    .lang-toggle,
+    footer {
+        display: none;
+    }
+
+    .site-header {
+        display: block;
+        padding-bottom: 1rem;
+    }
+
+    .contact-links {
+        margin-top: 0.75rem;
+    }
+
+    .summary {
+        padding-top: 1rem;
+    }
+
+    .summary-body {
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .resume-section {
+        margin-top: 1.5rem;
+    }
+
+    .section-heading,
+    .exp-name,
+    .pos-title {
+        break-after: avoid;
+    }
+
+    .section-heading {
+        margin-bottom: 0.75rem;
+    }
+
+    .exp + .exp {
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+    }
+
+    .skill-row {
+        grid-template-columns: 13rem minmax(0, 1fr);
+    }
+
+    .skill-row,
+    .lang-entry,
+    .pos li {
+        break-inside: avoid;
+    }
+
+    .pos li {
+        orphans: 2;
+        widows: 2;
+    }
 }

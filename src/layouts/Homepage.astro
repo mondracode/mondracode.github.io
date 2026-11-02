@@ -3,17 +3,34 @@ import '../styles/global.css';
 import '../styles/layout.css';
 
 const year = new Date().getFullYear();
+const title = 'Santiago Mondragón Gómez — Software Engineer';
+const description = 'Software engineer focused on Go backends and React applications. Currently at Auvik, with experience modernizing systems serving millions of users around the world.';
 ---
 
 <html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Santiago Mondragón Gómez</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.site} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.site} />
+    <meta name="twitter:card" content="summary" />
     <script is:inline>
       (function () {
-        var stored = localStorage.getItem('lang');
-        var lang = stored || (navigator.language.startsWith('es') ? 'es' : 'en');
+        var stored;
+        try {
+          stored = localStorage.getItem('lang');
+        } catch (_) {
+          // Language selection still works when browser storage is unavailable.
+        }
+        var lang = stored === 'es' || stored === 'en'
+          ? stored
+          : (navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en');
         document.documentElement.setAttribute('data-lang', lang);
         document.documentElement.lang = lang;
       })();
