@@ -51,12 +51,14 @@
 /* ── Language visibility ────────────────────────────────────────────────────── */
 
 :root[data-lang="en"] #content-es,
-:root[data-lang="en"] #tagline-es {
+:root[data-lang="en"] #tagline-es,
+:root[data-lang="en"] .name-es {
     display: none;
 }
 
 :root:not([data-lang="en"]) #content-en,
-:root:not([data-lang="en"]) #tagline-en {
+:root:not([data-lang="en"]) #tagline-en,
+:root:not([data-lang="en"]) .name-en {
     display: none;
 }
 
